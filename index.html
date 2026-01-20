@@ -22,6 +22,7 @@
         }
         
         body { font-family: 'Exo 2', sans-serif; background-color: var(--deep-ocean); color: var(--text-light); overflow-x: hidden; }
+        /* Typography Tuning */
         h1, h2, h3, .brand-font { font-family: 'Michroma', sans-serif; text-transform: uppercase; letter-spacing: -0.5px; }
         p { letter-spacing: 0.3px; }
 
@@ -34,7 +35,6 @@
 
         /* HERO SECTION */
         .hero-section {
-            /* Gambar Hero yang lebih dramatis (Terowongan/Struktur Besar) */
             background: linear-gradient(to bottom, rgba(2, 11, 20, 0.8), #020b14), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920');
             background-size: cover; background-position: center; position: relative;
         }
@@ -52,7 +52,6 @@
             transform: translateY(-8px);
             border-color: var(--neon-cyan);
         }
-        /* Efek kilatan pada card */
         .shield-card::before {
             content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
             background: linear-gradient(to right, transparent, rgba(0, 242, 255, 0.1), transparent);
@@ -60,30 +59,34 @@
         }
         .shield-card:hover::before { left: 150%; }
 
-        /* LIQUID BUTTON */
+        /* LIQUID BUTTON + SWEEP LIGHT EFFECT */
         .btn-liquid {
             background: linear-gradient(45deg, var(--shield-blue), #00aaff);
-            position: relative; overflow: hidden; border: none; z-index: 1; box-shadow: 0 0 20px rgba(0, 242, 255, 0.2); transition: all 0.3s;
+            position: relative; overflow: hidden; border: none; z-index: 1; 
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2); transition: all 0.3s;
         }
         .btn-liquid:hover { box-shadow: 0 0 30px rgba(0, 242, 255, 0.4); transform: scale(1.02); color: white; }
+        /* Efek Cairan Naik */
         .btn-liquid::before {
             content: ''; position: absolute; top: 100%; left: 0; width: 100%; height: 100%;
             background: var(--neon-cyan); transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); z-index: -1; border-radius: 50% 50% 0 0;
         }
         .btn-liquid:hover::before { top: 0; border-radius: 0; }
+        /* Efek Sinar Berjalan (Sweep) */
+        .btn-liquid::after {
+            content: ''; position: absolute; top: 0; left: -150%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+            transform: skewX(-20deg); animation: shine-anim 3s infinite; z-index: -2;
+        }
+        @keyframes shine-anim { 0% { left: -150%; } 30% { left: 150%; } 100% { left: 150%; } }
 
         /* NEON TEXT */
-        .text-neon {
-            color: var(--neon-cyan);
-            text-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
-        }
+        .text-neon { color: var(--neon-cyan); text-shadow: 0 0 15px rgba(0, 242, 255, 0.4); }
 
         /* STICKY CTA */
         .sticky-cta {
-            background: rgba(2, 11, 20, 0.95);
-            backdrop-filter: blur(15px);
-            border-top: 1px solid rgba(0, 242, 255, 0.2);
-            box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+            background: rgba(2, 11, 20, 0.95); backdrop-filter: blur(15px);
+            border-top: 1px solid rgba(0, 242, 255, 0.2); box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
         }
     </style>
 </head>
@@ -114,11 +117,11 @@
                 <span class="text-[var(--neon-cyan)] text-[9px] md:text-xs font-bold tracking-[0.25em] uppercase">Teknologi Anti Bocor Permanen</span>
             </div>
             
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 class="text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-snug md:leading-tight">
                 SPESIALIS INJEKSI <br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0066ff] text-neon">BETON & WATERPROOFING</span>
             </h1>
-            <p class="text-cyan-100/80 text-sm md:text-lg mb-10 max-w-2xl mx-auto font-light leading-relaxed px-4">
+            <p class="text-cyan-100/80 text-xs md:text-lg mb-10 max-w-2xl mx-auto font-light leading-relaxed px-4">
                 Mengatasi kebocoran struktur dengan teknologi kimia konstruksi mutakhir. Solusi untuk dak beton, basement, kolam renang, dan terowongan.
             </p>
             
@@ -134,7 +137,7 @@
         </div>
     </header>
 
-    <div class="relative z-20 -mt-16 max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div class="relative z-20 -mt-16 max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-3" data-aos="fade-up" data-aos-delay="200">
         <div class="shield-card p-4 text-center rounded-lg border-t-2 border-t-[var(--neon-cyan)]"><h3 class="text-2xl md:text-3xl font-bold text-white mb-1">100%</h3><p class="text-[9px] uppercase tracking-widest text-cyan-400">Garansi Kering</p></div>
         <div class="shield-card p-4 text-center rounded-lg border-t-2 border-t-[var(--neon-cyan)]"><h3 class="text-2xl md:text-3xl font-bold text-white mb-1">PU/EPOXY</h3><p class="text-[9px] uppercase tracking-widest text-cyan-400">Material Import</p></div>
         <div class="shield-card p-4 text-center rounded-lg border-t-2 border-t-[var(--neon-cyan)]"><h3 class="text-2xl md:text-3xl font-bold text-white mb-1">SNI/ASTM</h3><p class="text-[9px] uppercase tracking-widest text-cyan-400">Standar Mutu</p></div>
@@ -143,33 +146,21 @@
 
     <section class="py-20 relative">
          <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
+            <div class="text-center mb-12" data-aos="fade-up">
                  <h2 class="text-2xl md:text-3xl font-bold text-white brand-font mb-3">MENGAPA KAMI BERBEDA?</h2>
                  <p class="text-cyan-200/60 text-sm max-w-2xl mx-auto">Kami bukan sekadar tukang, kami adalah spesialis aplikator kimia konstruksi dengan pendekatan engineering.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="shield-card p-6 rounded-xl text-left" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fa-solid fa-flask-vial text-3xl text-[var(--neon-cyan)] mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-3">MATERIAL PREMIUM</h3>
-                    <p class="text-sm text-cyan-100/70 leading-relaxed">Menggunakan material PU (Polyurethane) dan Epoxy Resin dari produsen terkemuka dunia (Sika, Fosroc, BASF) untuk ketahanan jangka panjang.</p>
-                </div>
-                 <div class="shield-card p-6 rounded-xl text-left" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fa-solid fa-users-gear text-3xl text-[var(--neon-cyan)] mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-3">APLIKATOR BERSERTIFIKAT</h3>
-                    <p class="text-sm text-cyan-100/70 leading-relaxed">Tim kami terlatih mengenali karakteristik beton dan memilih metode injeksi yang tepat (High Pressure vs Low Pressure).</p>
-                </div>
-                 <div class="shield-card p-6 rounded-xl text-left" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fa-solid fa-handshake-simple text-3xl text-[var(--neon-cyan)] mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-3">GARANSI TERTULIS</h3>
-                    <p class="text-sm text-cyan-100/70 leading-relaxed">Kami memberikan garansi resmi atas pekerjaan perbaikan kebocoran, memberikan ketenangan pikiran bagi pemilik gedung.</p>
-                </div>
+                <div class="shield-card p-6 rounded-xl text-left" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-flask-vial text-3xl text-[var(--neon-cyan)] mb-4"></i><h3 class="text-xl font-bold text-white mb-3">MATERIAL PREMIUM</h3><p class="text-sm text-cyan-100/70 leading-relaxed">Menggunakan material PU dan Epoxy Resin dari produsen terkemuka dunia untuk ketahanan jangka panjang.</p></div>
+                 <div class="shield-card p-6 rounded-xl text-left" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-users-gear text-3xl text-[var(--neon-cyan)] mb-4"></i><h3 class="text-xl font-bold text-white mb-3">APLIKATOR BERSERTIFIKAT</h3><p class="text-sm text-cyan-100/70 leading-relaxed">Tim kami terlatih mengenali karakteristik beton dan memilih metode injeksi yang tepat.</p></div>
+                 <div class="shield-card p-6 rounded-xl text-left" data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-handshake-simple text-3xl text-[var(--neon-cyan)] mb-4"></i><h3 class="text-xl font-bold text-white mb-3">GARANSI TERTULIS</h3><p class="text-sm text-cyan-100/70 leading-relaxed">Kami memberikan garansi resmi atas pekerjaan perbaikan kebocoran, memberikan ketenangan pikiran.</p></div>
             </div>
          </div>
     </section>
 
     <section id="layanan" class="py-20 relative bg-[#010810]">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="flex items-end justify-between mb-12 border-b border-white/5 pb-6">
+            <div class="flex items-end justify-between mb-12 border-b border-white/5 pb-6" data-aos="fade-right">
                 <div>
                     <h2 class="text-2xl md:text-4xl font-bold text-white brand-font mb-1">METODE <span class="text-[var(--neon-cyan)]">PERBAIKAN</span></h2>
                     <p class="text-cyan-200/60 tracking-[0.15em] uppercase text-[10px] md:text-xs">Chemical Construction Technology</p>
@@ -177,15 +168,11 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="shield-card rounded-lg group cursor-pointer" onclick="openWA('Injeksi Beton PU')">
+                <div class="shield-card rounded-lg group cursor-pointer" onclick="openWA('Injeksi Beton PU')" data-aos="fade-up">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1635425029882-718fb375738e?q=80&w=800" 
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1584905066893-7d5c142bd452?q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#020b14] via-transparent to-transparent opacity-90"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="bg-[var(--shield-blue)] text-white font-bold text-[9px] px-2 py-0.5 mb-2 inline-block rounded-sm">SOLUSI BOCOR AKTIF</span>
-                            <h3 class="text-lg md:text-xl font-bold text-white">INJEKSI PU (POLYURETHANE)</h3>
-                        </div>
+                        <div class="absolute bottom-4 left-4"><span class="bg-[var(--shield-blue)] text-white font-bold text-[9px] px-2 py-0.5 mb-2 inline-block rounded-sm">SOLUSI BOCOR AKTIF</span><h3 class="text-lg md:text-xl font-bold text-white">INJEKSI PU (POLYURETHANE)</h3></div>
                     </div>
                     <div class="p-5">
                         <p class="text-cyan-100/70 text-sm mb-4 leading-relaxed line-clamp-3">Menyuntikkan cairan PU yang mengembang menjadi busa padat untuk menyumbat kebocoran aktif pada beton dan basement.</p>
@@ -193,10 +180,9 @@
                     </div>
                 </div>
 
-                <div class="shield-card rounded-lg group cursor-pointer" onclick="openWA('Injeksi Epoxy')">
+                <div class="shield-card rounded-lg group cursor-pointer" onclick="openWA('Injeksi Epoxy')" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800" 
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1535206539364-17210229c843?q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#020b14] via-transparent to-transparent opacity-90"></div>
                         <div class="absolute bottom-4 left-4"><h3 class="text-lg md:text-xl font-bold text-white">INJEKSI EPOXY STRUKTUR</h3></div>
                     </div>
@@ -206,16 +192,14 @@
                     </div>
                 </div>
 
-                <div class="shield-card rounded-lg group cursor-pointer md:row-span-2 border-l-2 border-l-[var(--neon-cyan)]" onclick="openWA('Waterproofing Membrane')">
+                <div class="shield-card rounded-lg group cursor-pointer md:row-span-2 border-l-2 border-l-[var(--neon-cyan)]" onclick="openWA('Waterproofing Membrane')" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-72 md:h-full overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1632759824177-6a50fb90a1c3?q=80&w=800" 
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1626094307038-102324d24485?q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#020b14] via-[#020b14]/40 to-transparent"></div>
                         <div class="absolute bottom-6 left-5 right-5">
                             <h3 class="text-2xl md:text-3xl font-bold text-white mb-2 brand-font italic">WATERPROOFING</h3>
-                            <p class="text-cyan-100/80 text-sm mb-5 leading-relaxed">
-                                Pelapisan anti-bocor untuk dak atap (Roof Top), kolam renang, dan area basah. Spesialis aplikasi <b>Membrane Bakar</b> dan Coating.
-                            </p>
+                            <p class="text-cyan-100/80 text-sm mb-5 leading-relaxed">Pelapisan anti-bocor untuk dak atap (Roof Top), kolam renang, dan area basah. Spesialis aplikasi <b>Membrane Bakar</b> dan Coating.</p>
+                            
                             <button class="w-full btn-liquid py-3 text-xs font-bold text-white uppercase tracking-widest rounded-sm">
                                 Pasang Proteksi <i class="fa-solid fa-chevron-right ml-2"></i>
                             </button>
@@ -223,10 +207,9 @@
                     </div>
                 </div>
 
-                <div class="shield-card rounded-lg group cursor-pointer" onclick="openWA('Cement Grouting')">
+                <div class="shield-card rounded-lg group cursor-pointer" onclick="openWA('Cement Grouting')" data-aos="fade-up">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=800" 
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#020b14] via-transparent to-transparent opacity-90"></div>
                         <div class="absolute bottom-4 left-4"><h3 class="text-lg md:text-xl font-bold text-white">CEMENT GROUTING</h3></div>
                     </div>
@@ -236,10 +219,9 @@
                     </div>
                 </div>
 
-                <div class="shield-card rounded-lg group cursor-pointer" onclick="openWA('Epoxy Flooring')">
+                <div class="shield-card rounded-lg group cursor-pointer" onclick="openWA('Epoxy Flooring')" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1631624215749-4931d2b028e8?q=80&w=800" 
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1584741847270-52645d84c912?q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#020b14] via-transparent to-transparent opacity-90"></div>
                         <div class="absolute bottom-4 left-4"><h3 class="text-lg md:text-xl font-bold text-white">EPOXY FLOORING</h3></div>
                     </div>
@@ -299,6 +281,7 @@
         <a href="tel:085283212205" class="flex-1 bg-white/5 backdrop-blur text-white text-xs font-bold py-3 rounded text-center flex items-center justify-center gap-2 border border-white/10">
             <i class="fa-solid fa-phone"></i> CALL
         </a>
+        
         <a href="https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20melihat%20website%20portofolio%20Jasa%20Injeksi%20Beton.%20Saya%20tertarik%20untuk%20konsultasi." class="flex-1 btn-liquid text-white text-xs font-bold py-3 rounded text-center flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(0,242,255,0.3)]">
             <i class="fa-brands fa-whatsapp text-sm"></i> WHATSAPP
         </a>
