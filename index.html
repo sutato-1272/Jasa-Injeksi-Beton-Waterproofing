@@ -3,225 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasa Injeksi Beton & Waterproofing Jakarta | Portofolio Ciledug Promo</title>
-    <meta name="description" content="Spesialis Injeksi Beton Retak (PU/Epoxy) dan Waterproofing Membrane Bakar Professional.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
+    <title>Jasa Injeksi Beton & Waterproofing Jakarta | Portofolio Ciledug Promo</title>
+    <meta name="description" content="Spesialis Injeksi Beton Retak (PU/Epoxy), Grouting, dan Waterproofing Membrane Bakar. Solusi anti bocor bergaransi untuk gedung dan rumah.">
+    <meta name="keywords" content="Jasa Injeksi Beton, Waterproofing Jakarta, Suntik Beton Retak, Injeksi PU, Ciledug Promo">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ciledug Promo">
+    
+    <meta property="og:title" content="Spesialis Injeksi Beton & Waterproofing - Ciledug Promo">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Jasa Injeksi Beton HydroShield",
+      "image": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200",
+      "description": "Kontraktor spesialis perbaikan kebocoran beton dan waterproofing.",
+      "telephone": "+6285283212205",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tangerang",
+        "addressRegion": "Banten",
+        "addressCountry": "ID"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
+        body { font-family: 'Outfit', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        
+        /* WARNA UTAMA: CYAN & DEEP BLUE */
         :root {
-            --neon-cyan: #00f2ff;
-            --dark-bg: #050b14;
-            --card-bg: #0f172a;
-        }
-        
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--dark-bg); 
-            color: #e2e8f0; 
-            overflow-x: hidden;
+            --primary: #06b6d4; /* Cyan-500 */
+            --dark: #020617;    /* Slate-950 */
         }
 
-        h1, h2, h3, .brand-font { font-family: 'Rajdhani', sans-serif; text-transform: uppercase; }
-
-        /* BUTTON AURA (STABIL) */
-        .btn-aura {
-            background: linear-gradient(45deg, #00f2ff, #0066ff);
-            color: black;
-            font-weight: 800;
-            text-transform: uppercase;
-            border: none;
+        /* TOMBOL AURA MODERN (STABIL) */
+        .btn-glow {
+            background: linear-gradient(90deg, #06b6d4, #3b82f6);
             position: relative;
+            z-index: 1;
             overflow: hidden;
-            transition: transform 0.2s;
-            box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+            border: none;
         }
-        .btn-aura:hover { transform: scale(1.02); color: white; }
-        
-        /* Efek Kilat Simple */
-        .btn-aura::after {
-            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-            animation: shine 3s infinite;
+        .btn-glow:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.8);
         }
-        @keyframes shine { 0% { left: -100%; } 20% { left: 200%; } 100% { left: 200%; } }
+        /* Efek Kilat Berjalan */
+        .btn-glow::after {
+            content: "";
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: sweep 3s infinite;
+        }
+        @keyframes sweep {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
 
-        /* CARD STABIL (NO ABSOLUTE POSITIONING) */
+        /* CARD DESIGN (ANTI-PECAH) */
         .service-card {
-            background-color: var(--card-bg);
-            border: 1px solid #1e293b;
+            background: #1e293b;
+            border: 1px solid #334155;
             border-radius: 12px;
-            overflow: hidden; /* Mencegah gambar keluar */
-            transition: transform 0.3s;
+            overflow: hidden;
+            transition: transform 0.3s ease;
         }
         .service-card:hover {
             transform: translateY(-5px);
-            border-color: var(--neon-cyan);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--primary);
         }
-        
-        /* HERO BACKGROUND */
-        .hero-bg {
-            background: linear-gradient(rgba(5, 11, 20, 0.8), rgba(5, 11, 20, 0.8)), 
-                        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200');
-            background-size: cover;
-            background-position: center;
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
-        /* STICKY CTA */
-        .sticky-cta {
+        /* STICKY NAVBAR BAWAH */
+        .sticky-bottom {
             background: rgba(15, 23, 42, 0.95);
-            border-top: 2px solid var(--neon-cyan);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #334155;
         }
     </style>
 </head>
 <body class="pb-24 md:pb-0">
 
-    <nav class="fixed w-full z-50 top-0 left-0 bg-[#050b14]/95 border-b border-gray-800 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <i class="fa-solid fa-droplet-slash text-2xl text-[var(--neon-cyan)]"></i>
-                <div>
-                    <h1 class="text-xl font-bold text-white brand-font leading-none">HYDRO<span class="text-[var(--neon-cyan)]">SHIELD</span></h1>
-                    <p class="text-[10px] text-gray-400 tracking-widest">Injection Specialist</p>
+    <nav class="fixed top-0 w-full z-50 bg-[#020617]/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-3xl text-cyan-400"></i>
+                <div class="leading-tight">
+                    <h1 class="text-xl font-black tracking-tighter text-white">HYDRO<span class="text-cyan-400">SHIELD</span></h1>
+                    <p class="text-[10px] uppercase text-gray-400 tracking-widest">Injection Specialist</p>
                 </div>
             </div>
-            <a href="https://wa.me/6285283212205" class="hidden md:block btn-aura px-6 py-2 rounded text-xs">
+            <a href="https://wa.me/6285283212205" class="hidden md:block btn-glow px-6 py-2 rounded-full text-white font-bold text-sm">
                 HUBUNGI KAMI
             </a>
         </div>
     </nav>
 
-    <header class="hero-bg min-h-[80vh] flex items-center justify-center text-center px-4 pt-20">
-        <div class="max-w-3xl" data-aos="fade-up">
-            <span class="inline-block py-1 px-3 rounded bg-blue-900/50 border border-blue-500 text-blue-300 text-xs font-bold tracking-widest mb-4">
-                TEKNOLOGI ANTI BOCOR PERMANEN
+    <header class="relative pt-32 pb-20 px-4 min-h-[85vh] flex items-center justify-center text-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1920" alt="Construction Background" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0f172a] via-transparent to-[#0f172a]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto" data-aos="zoom-in">
+            <span class="inline-block py-1 px-4 rounded-full bg-cyan-900/50 border border-cyan-500 text-cyan-300 text-xs font-bold tracking-widest mb-6">
+                TEKNOLOGI ANTI BOCOR TERBARU
             </span>
-            <h1 class="text-3xl md:text-6xl font-black text-white mb-6 leading-tight">
+            <h1 class="text-4xl md:text-7xl font-black text-white mb-6 leading-tight">
                 SPESIALIS INJEKSI <br>
-                <span class="text-[var(--neon-cyan)]">BETON & WATERPROOFING</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">BETON & WATERPROOFING</span>
             </h1>
-            <p class="text-gray-300 text-sm md:text-lg mb-8 leading-relaxed max-w-xl mx-auto">
-                Solusi teknis perbaikan struktur beton retak, dak bocor, basement rembes, dan waterproofing kolam renang dengan material mutu tinggi.
+            <p class="text-gray-400 text-sm md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+                Solusi permanen mengatasi beton retak, dak bocor, dan rembesan basement menggunakan material <b>Polyurethane (PU)</b> & <b>Epoxy</b> standar industri.
             </p>
-            
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#layanan" class="px-8 py-3 border border-gray-500 text-white font-bold rounded hover:bg-gray-800 transition">
+                <a href="#layanan" class="px-8 py-3 rounded-full border border-gray-600 text-white font-bold hover:bg-gray-800 transition">
                     LIHAT METODE
                 </a>
-                <a href="https://wa.me/6285283212205" class="btn-aura px-8 py-3 rounded flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp"></i> KONSULTASI GRATIS
+                <a href="https://wa.me/6285283212205" class="btn-glow px-8 py-3 rounded-full text-white font-bold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> KONSULTASI GRATIS
                 </a>
             </div>
         </div>
     </header>
 
-    <div class="bg-[#0f172a] border-y border-gray-800">
-        <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 py-8 text-center">
-            <div><h3 class="text-3xl font-bold text-[var(--neon-cyan)]">100%</h3><p class="text-xs text-gray-400 mt-1">GARANSI KERING</p></div>
-            <div><h3 class="text-3xl font-bold text-[var(--neon-cyan)]">PU</h3><p class="text-xs text-gray-400 mt-1">MATERIAL IMPOR</p></div>
-            <div><h3 class="text-3xl font-bold text-[var(--neon-cyan)]">SNI</h3><p class="text-xs text-gray-400 mt-1">STANDAR MUTU</p></div>
-            <div><h3 class="text-3xl font-bold text-[var(--neon-cyan)]">24/7</h3><p class="text-xs text-gray-400 mt-1">SIAGA BOCOR</p></div>
+    <div class="border-y border-gray-800 bg-[#020617]">
+        <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div><h3 class="text-3xl font-black text-cyan-400">100%</h3><p class="text-xs text-gray-500 font-bold mt-1">GARANSI KERING</p></div>
+            <div><h3 class="text-3xl font-black text-cyan-400">PU</h3><p class="text-xs text-gray-500 font-bold mt-1">MATERIAL IMPOR</p></div>
+            <div><h3 class="text-3xl font-black text-cyan-400">SNI</h3><p class="text-xs text-gray-500 font-bold mt-1">STANDAR MUTU</p></div>
+            <div><h3 class="text-3xl font-black text-cyan-400">24/7</h3><p class="text-xs text-gray-500 font-bold mt-1">SIAGA BOCOR</p></div>
         </div>
     </div>
 
-    <section id="layanan" class="py-16">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-4xl font-bold brand-font text-white mb-2">METODE <span class="text-[var(--neon-cyan)]">PERBAIKAN</span></h2>
-                <p class="text-gray-400 text-sm">Teknologi Kimia Konstruksi Modern</p>
+    <section id="layanan" class="py-20 bg-[#0f172a]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">METODE PERBAIKAN KAMI</h2>
+                <div class="h-1 w-24 bg-cyan-500 mx-auto rounded"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="service-card group cursor-pointer" onclick="openWA('Injeksi PU')">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=600" 
-                             alt="Injeksi Beton PU" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute bottom-0 left-0 bg-black/60 w-full p-2">
-                            <span class="text-[var(--neon-cyan)] text-xs font-bold">SOLUSI BOCOR AKTIF</span>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">INJEKSI PU (FOAM)</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                            Suntik cairan Polyurethane yang mengembang jadi busa padat untuk menyumbat air deras di beton/basement.
+                <div class="service-card group" onclick="openWA('Injeksi PU')">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800" alt="Injeksi Beton PU" class="card-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition">INJEKSI PU (FOAM)</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Menyuntikkan cairan Polyurethane yang mengembang menjadi busa padat untuk menyumbat kebocoran air aktif bertekanan tinggi seketika.
                         </p>
-                        <span class="text-xs text-[var(--neon-cyan)] font-bold flex items-center gap-1">
-                            CONSULT NOW <i class="fa-solid fa-arrow-right"></i>
-                        </span>
+                        <span class="text-cyan-500 text-xs font-bold uppercase tracking-wider">Selengkapnya &rarr;</span>
                     </div>
                 </div>
 
-                <div class="service-card group cursor-pointer" onclick="openWA('Injeksi Epoxy')">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600" 
-                             alt="Injeksi Epoxy" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">INJEKSI EPOXY</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                            Lem beton kekuatan tinggi untuk menyatukan kembali struktur retak pada kolom, balok, dan lantai.
+                <div class="service-card group" onclick="openWA('Injeksi Epoxy')">
+                    <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=800" alt="Injeksi Epoxy Struktur" class="card-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition">INJEKSI EPOXY</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Lem beton kekuatan tinggi untuk menyatukan kembali struktur beton yang retak (kolom, balok, lantai) akibat beban atau gempa.
                         </p>
-                        <span class="text-xs text-[var(--neon-cyan)] font-bold flex items-center gap-1">
-                            CONSULT NOW <i class="fa-solid fa-arrow-right"></i>
-                        </span>
+                        <span class="text-cyan-500 text-xs font-bold uppercase tracking-wider">Selengkapnya &rarr;</span>
                     </div>
                 </div>
 
-                <div class="service-card group cursor-pointer" onclick="openWA('Waterproofing')">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1632759823528-a3f240576307?q=80&w=600" 
-                             alt="Waterproofing Membrane" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">WATERPROOFING</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                            Pelapis anti bocor Membrane Bakar untuk dak atap (Rooftop), kolam renang, dan area basah.
+                <div class="service-card group" onclick="openWA('Waterproofing')">
+                    <img src="https://images.unsplash.com/photo-1632759823528-a3f240576307?q=80&w=800" alt="Waterproofing Membrane" class="card-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition">WATERPROOFING</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Pemasangan pelapis anti bocor (Membrane Bakar / Coating) untuk dak atap, kolam renang, dan area basah lainnya.
                         </p>
-                        <span class="text-xs text-[var(--neon-cyan)] font-bold flex items-center gap-1">
-                            CONSULT NOW <i class="fa-solid fa-arrow-right"></i>
-                        </span>
+                        <span class="text-cyan-500 text-xs font-bold uppercase tracking-wider">Selengkapnya &rarr;</span>
                     </div>
                 </div>
 
-                <div class="service-card group cursor-pointer" onclick="openWA('Grouting')">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?q=80&w=600" 
-                             alt="Cement Grouting" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">CEMENT GROUTING</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                            Pengisian celah beton (void) dan dudukan mesin menggunakan semen non-shrink mutu tinggi.
+                <div class="service-card group" onclick="openWA('Grouting')">
+                    <img src="https://images.unsplash.com/photo-1590372648787-fa5a93593862?q=80&w=800" alt="Cement Grouting" class="card-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition">CEMENT GROUTING</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Pengisian celah beton (void) atau dudukan mesin menggunakan semen non-shrink mutu tinggi agar padat dan kuat.
                         </p>
-                        <span class="text-xs text-[var(--neon-cyan)] font-bold flex items-center gap-1">
-                            CONSULT NOW <i class="fa-solid fa-arrow-right"></i>
-                        </span>
+                        <span class="text-cyan-500 text-xs font-bold uppercase tracking-wider">Selengkapnya &rarr;</span>
                     </div>
                 </div>
 
-                 <div class="service-card group cursor-pointer" onclick="openWA('Epoxy Lantai')">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1631624215749-4931d2b028e8?q=80&w=600" 
-                             alt="Epoxy Flooring" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">EPOXY FLOORING</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                            Cat lantai khusus pabrik/gudang. Tahan kimia, anti debu, mengkilap, dan mudah dibersihkan.
+                <div class="service-card group" onclick="openWA('Epoxy Lantai')">
+                    <img src="https://images.unsplash.com/photo-1631624215749-4931d2b028e8?q=80&w=800" alt="Epoxy Lantai" class="card-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition">EPOXY FLOORING</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Cat lantai khusus industri/gudang. Tahan kimia, anti debu, mengkilap, dan mudah dibersihkan (Hygienic Standard).
                         </p>
-                        <span class="text-xs text-[var(--neon-cyan)] font-bold flex items-center gap-1">
-                            CONSULT NOW <i class="fa-solid fa-arrow-right"></i>
-                        </span>
+                        <span class="text-cyan-500 text-xs font-bold uppercase tracking-wider">Selengkapnya &rarr;</span>
                     </div>
                 </div>
 
@@ -229,62 +222,55 @@
         </div>
     </section>
 
-    <section class="py-16 border-t border-gray-800">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+    <section class="py-20 bg-[#020617] border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-2xl font-bold brand-font text-white mb-4">AREA <span class="text-[var(--neon-cyan)]">LAYANAN</span></h2>
-                <ul class="space-y-4 text-gray-300 text-sm">
-                    <li class="flex items-center gap-3">
-                        <i class="fa-solid fa-location-dot text-[var(--neon-cyan)]"></i> 
-                        Jakarta, Bogor, Depok, Tangerang, Bekasi
+                <h2 class="text-3xl font-bold text-white mb-6">JANGKAUAN LAYANAN</h2>
+                <p class="text-gray-400 mb-6">Kami melayani pengerjaan di seluruh area Jabodetabek dan Kawasan Industri sekitarnya.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3 text-gray-300">
+                        <i class="fa-solid fa-location-dot text-cyan-500"></i> Jakarta, Bogor, Depok, Tangerang, Bekasi
                     </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fa-solid fa-industry text-[var(--neon-cyan)]"></i> 
-                        Kawasan Industri Cikarang & Karawang
+                    <li class="flex items-center gap-3 text-gray-300">
+                        <i class="fa-solid fa-industry text-cyan-500"></i> Cikarang, Karawang, Cilegon
                     </li>
                 </ul>
             </div>
-            <div class="bg-gray-800 p-2 rounded-lg">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.716909516854!2d106.704859!3d-6.24009405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88ed343af45fc195%3A0x98e5b8eaad8e2564!2sCiledugPromo.biz.id%20%7C%20Layanan%20Bisnis%20%26%20Pemasaran!5e0!3m2!1sid!2sid!4v1768642599691!5m2!1sid!2sid" width="100%" height="250" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy"></iframe>
+            <div class="bg-gray-800 p-2 rounded-lg h-[300px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.716909516854!2d106.704859!3d-6.24009405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88ed343af45fc195%3A0x98e5b8eaad8e2564!2sCiledugPromo.biz.id%20%7C%20Layanan%20Bisnis%20%26%20Pemasaran!5e0!3m2!1sid!2sid!4v1768642599691!5m2!1sid!2sid" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <footer class="bg-black py-10 border-t border-gray-800 text-center md:text-left">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
-            <div>
-                <h3 class="text-xl font-bold text-white brand-font mb-2">HYDRO SHIELD</h3>
-                <p class="text-gray-500">Website Portofolio Resmi Ciledug Promo.</p>
+    <footer class="bg-black py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-black text-white mb-4">HYDRO<span class="text-cyan-400">SHIELD</span></h2>
+            <p class="text-gray-500 text-sm max-w-md mx-auto mb-8">
+                Website Portofolio Resmi oleh Ciledug Promo. Solusi terbaik untuk kebutuhan konstruksi dan perawatan bangunan Anda.
+            </p>
+            <div class="flex justify-center gap-6 text-sm text-gray-400 mb-8">
+                <span><i class="fa-brands fa-whatsapp mr-2"></i> 0852-8321-2205</span>
+                <span><i class="fa-solid fa-globe mr-2"></i> ciledugpromo.com</span>
             </div>
-            <div>
-                <h4 class="text-white font-bold mb-2">KONTAK</h4>
-                <p class="text-gray-500">0852-8321-2205 (WhatsApp)</p>
-                <p class="text-gray-500">ciledugpromo.com</p>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-2">ALAMAT</h4>
-                <p class="text-gray-500">Tangerang, Indonesia</p>
-            </div>
-        </div>
-        <div class="mt-8 pt-8 border-t border-gray-900 text-center text-xs text-gray-600">
-            © 2026 Portofolio by Ciledug Promo Team.
+            <p class="text-xs text-gray-700">&copy; 2026 Portofolio Template by Ciledug Promo Team.</p>
         </div>
     </footer>
 
-    <div class="sticky-cta fixed bottom-0 left-0 w-full p-3 flex gap-3 md:hidden z-50">
-        <a href="tel:085283212205" class="flex-1 bg-white text-black font-bold py-3 rounded text-center text-xs border border-gray-300">
-            <i class="fa-solid fa-phone"></i> CALL
+    <div class="fixed bottom-0 left-0 w-full p-4 flex gap-3 z-50 sticky-bottom md:hidden">
+        <a href="tel:085283212205" class="flex-1 bg-white text-black font-bold py-3 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fa-solid fa-phone"></i> TELEPON
         </a>
-        <a href="https://wa.me/6285283212205" class="flex-1 btn-aura text-white font-bold py-3 rounded text-center text-xs flex items-center justify-center gap-2">
-            <i class="fa-brands fa-whatsapp text-sm"></i> WHATSAPP
+        <a href="https://wa.me/6285283212205" class="flex-1 btn-glow text-white font-bold py-3 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i> WHATSAPP
         </a>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+        
         function openWA(service) {
-            window.open(`https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20tertarik%20dengan%20layanan%20${service}`, '_blank');
+            window.open(`https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20melihat%20website%20portofolio%20dan%20tertarik%20dengan%20layanan%20${service}`, '_blank');
         }
     </script>
 </body>
